@@ -1,2 +1,2 @@
 # FuzzyController-simulink
-School project
+School project in Matlab and Simulink
