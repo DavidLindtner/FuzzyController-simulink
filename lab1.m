@@ -19,5 +19,15 @@ satValue = 220;
 desireValue = 30;    % desired value of liquid level [cm]
 %%
 
+sim sim1;
+data = ans.ScopeData;
+
+
+plotSimulinkData(data);
+
+
+
+
+
 
 
