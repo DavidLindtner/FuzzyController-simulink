@@ -7,6 +7,9 @@ function [incrementVoltage] = MediumOfMaxima(DOM,outputSet, memType)
     maxDomIndex = find(DOM==max(DOM));
 
     maxDom = DOM(maxDomIndex(1));
+    
+    inc1 = 0;
+    inc2 = 0;
 
 %   VERY VERY LOW output rule
     if maxDomIndex(1) == 1

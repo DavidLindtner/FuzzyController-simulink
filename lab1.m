@@ -19,13 +19,28 @@ satValue = 220;
 desireValue = 30;    % desired value of liquid level [cm]
 %%
 
+% inputSetErr = [-5 0 5], [-5 -2 2 5]
+% inputSetDErr = [-1 0 1], [-1 -0.5 0.5 1]
+% outputSet = [-0.5 -0.1 0 0.1 0.5], [-1 -0.5 -0.1 0 0.1 0.5 1]
+
+infEngine = struct('MamdaniMinimum', 1, 'MamdaniProduct', 2);
+memType = struct('Triangullar', 1, 'Gaussian', 2);
+defType = struct('SoM', 1, 'MoM', 2, 'LoM', 3, 'CA', 4, 'CoG', 5);
+
+
+
+inferenceEngine = infEngine.MamdaniMinimum;
+membershipType = memType.Triangullar;
+defuzzyfierType = defType.CA;
+
+inputSetErr = [-5 0 5];
+inputSetDErr = [-1 0 1];
+outputSet = [-0.5 -0.1 0 0.1 0.5];
+
 sim sim1;
 data = ans.ScopeData;
 
-
 plotSimulinkData(data);
-
-
 
 
 

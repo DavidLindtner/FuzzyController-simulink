@@ -3,6 +3,7 @@ function changeVoltage = defuzzyfier(DOM, outputSet, dtype, memType)
 %dtype = diffuzifier type
 %memType = membership function type 'Triangullar', 'Gaussian'
 
+changeVoltage = 0;
 switch dtype
     case 'SoM' %smallest of maxima 
         changeVoltage = SmallestOfMaxima(DOM, outputSet, memType);

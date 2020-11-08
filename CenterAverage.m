@@ -13,6 +13,9 @@ function [incrementVoltage] = CenterAverage(DOM, outputSet, memType)
     maxDomIndex2 = find(DOM==max(DOM));
     maxDom2 = DOM(maxDomIndex2(1));
     
+    inc1 = 0;
+    inc2 = 0;
+    
 %%  find output value of highest maximum
 %   VERY VERY LOW output rule
     if maxDomIndex1(1) == 1
