@@ -3,6 +3,8 @@ function out = halfGaussian(start, stop, edge, value)
 %   Detailed explanation goes here
 
     interval = stop - start;
+    interval = interval/2;
+    
     switch edge
         case 'falling'
             out = exp(-(value - start).^2/(interval));
