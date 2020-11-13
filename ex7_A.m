@@ -1,5 +1,6 @@
 %%  EX 7
-% Testing of various references
+% Testing of various references - worse controller
+
 desValChange = 1;
 %%  setting parameters of fuzzy system
 inferenceEngine = infEngine.MamdaniMinimum;

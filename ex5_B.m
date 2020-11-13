@@ -1,5 +1,5 @@
 %%  EX 5.
-% Testing of various inference engines
+% Testing of various defuzzifiers
 
 %%  setting parameters of fuzzy system
 inferenceEngine = infEngine.MamdaniMinimum;
