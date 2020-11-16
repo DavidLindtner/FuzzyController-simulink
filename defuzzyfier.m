@@ -1,4 +1,4 @@
-function changeVoltage = defuzzyfier(DOM, outputSet, dtype, memType)
+function changeVoltage = defuzzyfier(error, dError, DOM, outputSet, dtype, memType)
 %DOM = Degree of Membership
 %dtype = diffuzifier type
 %memType = membership function type 'Triangullar', 'Gaussian'
@@ -14,10 +14,9 @@ switch dtype
     case 'MoM' %medium of maxima
         changeVoltage = MediumOfMaxima(DOM, outputSet, memType);
         
-    case 'CoG' %center of gravity
-        %   not implemented
-        changeVoltage = CenterOfGravity(DOM, outputSet);
-        
     case 'CA' %center average
         changeVoltage = CenterAverage(DOM, outputSet, memType);
+        
+    case 'TS' %Takagi Sugeno
+        changeVoltage = TakagiSugeno(error, dError, DOM);
 end

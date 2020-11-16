@@ -191,29 +191,29 @@ function [DOM] = IfThenRules(err, dErr, inputSetErr, inputSetDErr, fType, memTyp
                     DOM(4) = max(DOM_mp(6), DOM_mp(8));
                     DOM(5) = DOM_mp(9);
                 elseif max(size(inputSetErr)) == 4
-                    DOM(1) = max(DOM_mm(1), max(DOM_mm(2), DOM_mm(5)));
-                    DOM(2) = max(DOM_mm(3), max(DOM_mm(6), DOM_mm(9)));
-                    DOM(3) = max(DOM_mm(4), max(DOM_mm(7), max(DOM_mm(10), DOM_mm(13))));
-                    DOM(4) = max(DOM_mm(8), max(DOM_mm(11), DOM_mm(14)));
-                    DOM(5) = max(DOM_mm(12), max(DOM_mm(15), DOM_mm(16)));
+                    DOM(1) = max(DOM_mp(1), max(DOM_mp(2), DOM_mp(5)));
+                    DOM(2) = max(DOM_mp(3), max(DOM_mp(6), DOM_mp(9)));
+                    DOM(3) = max(DOM_mp(4), max(DOM_mp(7), max(DOM_mp(10), DOM_mp(13))));
+                    DOM(4) = max(DOM_mp(8), max(DOM_mp(11), DOM_mp(14)));
+                    DOM(5) = max(DOM_mp(12), max(DOM_mp(15), DOM_mp(16)));
                 end
             elseif outDim == 7
                 if max(size(inputSetErr)) == 3
-                    DOM(1) = DOM_mm(1);
-                    DOM(2) = DOM_mm(4);
-                    DOM(3) = DOM_mm(2);
-                    DOM(4) = max(DOM_mm(3), max(DOM_mm(5), DOM_mm(7)));
-                    DOM(5) = DOM_mm(8);
-                    DOM(6) = DOM_mm(6);
-                    DOM(7) = DOM_mm(9);
+                    DOM(1) = DOM_mp(1);
+                    DOM(2) = DOM_mp(4);
+                    DOM(3) = DOM_mp(2);
+                    DOM(4) = max(DOM_mp(3), max(DOM_mp(5), DOM_mp(7)));
+                    DOM(5) = DOM_mp(8);
+                    DOM(6) = DOM_mp(6);
+                    DOM(7) = DOM_mp(9);
                 elseif max(size(inputSetErr)) == 4
-                    DOM(1) = DOM_mm(1);
-                    DOM(2) = max(DOM_mm(2), DOM_mm(5));
-                    DOM(3) = max(DOM_mm(3), max(DOM_mm(6), DOM_mm(9)));
-                    DOM(4) = max(DOM_mm(4), max(DOM_mm(7), max(DOM_mm(10), DOM_mm(15))));
-                    DOM(5) = max(DOM_mm(8), max(DOM_mm(11), DOM_mm(14)));
-                    DOM(6) = max(DOM_mm(12), DOM_mm(15));
-                    DOM(7) = DOM_mm(16);
+                    DOM(1) = DOM_mp(1);
+                    DOM(2) = max(DOM_mp(2), DOM_mp(5));
+                    DOM(3) = max(DOM_mp(3), max(DOM_mp(6), DOM_mp(9)));
+                    DOM(4) = max(DOM_mp(4), max(DOM_mp(7), max(DOM_mp(10), DOM_mp(15))));
+                    DOM(5) = max(DOM_mp(8), max(DOM_mp(11), DOM_mp(14)));
+                    DOM(6) = max(DOM_mp(12), DOM_mp(15));
+                    DOM(7) = DOM_mp(16);
                 end
             end
     end
